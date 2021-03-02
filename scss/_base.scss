@@ -1,0 +1,146 @@
+@use '_reset' as *;
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$--clr-primary-dark-cyan: hsl(185, 75%, 39%);
+$--clr-primary-very-dark-blue: hsl(229, 23%, 23%);
+$--clr-primary-dark-grayish-blue: hsl(227, 10%, 46%);
+$--clr-neutral-dark-gray: hsl(0, 0%, 59%);
+$--fs-name-stats: 18px;
+$--ff-main: 'Kumbh Sans', sans-serif;
+$--fw-400: 400;
+$--fw-700: 700;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: $--clr-primary-dark-cyan;
+    font-family: $--ff-main;
+}
+
+main {
+    background: url('../images/bg-pattern-top.svg'),  url('../images/bg-pattern-bottom.svg');
+    background-position: -10% 180%, 100% -150%;
+    background-repeat: no-repeat, no-repeat;
+    height: 100%;
+
+    display: flex;
+    place-items: center;
+}
+
+section {
+    position: relative;
+    margin: 0 auto;
+    width: 25rem;
+    display: flex;
+}
+
+.profile-card {
+    width: 400rem;
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr .6fr;
+}
+
+.profile-card-top {
+    background: url("../../images/bg-pattern-card.svg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.profile-card-photo {
+    position: absolute;
+    margin: 0 auto;
+    left: 0; right: 0; bottom: -50px;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    background-color: white;
+
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+.profile-card-photo img {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%; 
+}
+
+.profile-card-medium {
+    background: white;
+    display: grid;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.profile-card-details {
+    width: 100%;
+    height: 100%;
+    padding-top: 4rem;
+}
+
+.profile-card-details h2 span{
+    font-weight: $--fw-700;
+    font-size: $--fs-name-stats;
+    color: gray;
+}
+
+.profile-card-details h4 {
+    margin-top: 5px;
+    text-align: center;
+    font-weight: $--fw-400;
+    font-size: $--fs-name-stats;
+    color: gray;
+}
+
+.profile-card-social {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px;
+    border-style: solid;
+    border-color: rgba($--clr-neutral-dark-gray, .3);
+    border-radius: 0 0 20px 20px;;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.profile-card-social .statistics {
+    width: 100%;
+    height: 4em;
+    // outline: 1px solid black;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+.statistics h2 {
+    text-align: center;
+    font-weight: $--fw-700;
+    font-size: $--fs-name-stats;
+    margin-bottom: -10px;
+}
+
+.statistics h4 {
+    text-align: center;
+    font-weight: $--fw-400;
+    font-size: $--fs-name-stats * .7;
+    color: $--clr-neutral-dark-gray;
+}
+
+@import "mobile";

@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #19a2ae;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+main {
+  background: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-position: -10% 180%, 100% -150%;
+  background-repeat: no-repeat, no-repeat;
+  height: 100%;
+  display: flex;
+  place-items: center;
+}
+
+section {
+  position: relative;
+  margin: 0 auto;
+  width: 25rem;
+  display: flex;
+}
+
+.profile-card {
+  width: 400rem;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 0.6fr;
+}
+
+.profile-card-top {
+  background: url("../../images/bg-pattern-card.svg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.profile-card-photo {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
+
+.profile-card-photo img {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.profile-card-medium {
+  background: white;
+  display: grid;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.profile-card-details {
+  width: 100%;
+  height: 100%;
+  padding-top: 4rem;
+}
+
+.profile-card-details h2 span {
+  font-weight: 700;
+  font-size: 18px;
+  color: gray;
+}
+
+.profile-card-details h4 {
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  color: gray;
+}
+
+.profile-card-social {
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px;
+  border-style: solid;
+  border-color: rgba(150, 150, 150, 0.3);
+  border-radius: 0 0 20px 20px;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.profile-card-social .statistics {
+  width: 100%;
+  height: 4em;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
+.statistics h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: -10px;
+}
+
+.statistics h4 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 12.6px;
+  color: #969696;
+}
